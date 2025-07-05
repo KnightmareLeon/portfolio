@@ -2,8 +2,18 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Edit Undo';
+	src: url('assets/fonts/editundo.eot');
+	src: url('assets/fonts/editundo.eot?#iefix') format('embedded-opentype'), 
+		url('assets/fonts/editundo.woff') format('woff'),
+		url('assets/fonts/editundo.woff2') format('woff2'),
+		url('assets/fonts/editundo.ttf') format('truetype'),
+		url('assets/fonts/editundo.svg#svgFontName') format('svg');
+}
+
 html {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Edit Undo', Fallback, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -19,7 +29,6 @@ header {
 	position: sticky;
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 100%;
-	padding: 0.5rem;
 	color: rgb(64, 255, 0);
 	display: flex;
 	justify-content: space-between;
@@ -27,6 +36,7 @@ header {
 }
 
 .header-title{
+	padding: 0.5rem;
 	font-weight: bold;
 	font-size: clamp(1rem, 7.5vw, 4rem);
 	opacity: 1;
@@ -38,11 +48,55 @@ header {
 }
 
 .header-buttons a{
-	padding: clamp(2px, 3vw, 20px);
+	padding: 10% clamp(2px, 3vw, 20px);
 }
 
 .header-buttons a:hover {
 	background-color: rgba(112, 84, 84, 0.3);
 	color: white;
 	transition: 300ms;
+}
+
+#home {
+	border: 5px solid azure;
+	border-radius: 0.5rem;
+	margin: 1rem 10%;
+	padding: 1rem;
+	text-align: center;
+	font-size: clamp(1rem, 2vw, 3rem);
+	color: azure;
+	width: 80%;
+	background-color: rgba(255, 255, 255, 0.1);
+	clip-path: polygon(
+	0px 8px,
+	4px 8px,
+	4px 4px,
+	8px 4px,
+	8px 0px,
+	calc(100% - 8px) 0px,
+	calc(100% - 8px) 4px,
+	calc(100% - 4px) 4px,
+	calc(100% - 4px) 8px,
+	100% 8px,
+	100% calc(100% - 8px),
+	calc(100% - 4px) calc(100% - 8px),
+	calc(100% - 4px) calc(100% - 4px),
+	calc(100% - 8px) calc(100% - 4px),
+	calc(100% - 8px) 100%,
+	8px 100%,
+	8px calc(100% - 4px),
+	4px calc(100% - 4px),
+	4px calc(100% - 8px),
+	0px calc(100% - 8px)
+    );
+}
+
+#home img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: clamp(128px, 20%, 256px);
+	height: auto;
+	image-rendering: pixelated;
+
 }
