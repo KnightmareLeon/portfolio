@@ -25,18 +25,22 @@ body{
 	background-image: radial-gradient(circle at 50% 50%, #222 0%, #000 100%);
 }
 
+pre {
+	font-family: 'Edit Undo', Fallback, sans-serif;
+}
+
 header {
 	position: sticky;
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 100%;
-	color: rgb(64, 255, 0);
+	color: rgb(57, 255, 20);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .header-title{
-	padding: 0.5rem;
+	padding: 0.5rem 0.5rem 0.5rem 2.5%;
 	font-weight: bold;
 	font-size: clamp(1rem, 7.5vw, 4rem);
 	opacity: 1;
@@ -57,16 +61,9 @@ header {
 	transition: 300ms;
 }
 
-#home {
-	border: 5px solid azure;
-	border-radius: 0.5rem;
-	margin: 1rem 10%;
-	padding: 1rem;
-	text-align: center;
-	font-size: clamp(1rem, 2vw, 3rem);
-	color: azure;
-	width: 80%;
-	background-color: rgba(255, 255, 255, 0.1);
+.pixelated-border{
+	border: 5px solid rgb(57, 255, 20);
+	border-radius: 0.7rem;
 	clip-path: polygon(
 	0px 8px,
 	4px 8px,
@@ -91,6 +88,17 @@ header {
     );
 }
 
+#home {
+	
+	margin: 1rem 10%;
+	padding: 1rem;
+	font-size: clamp(1rem, 2vw, 3rem);
+	color: azure;
+	width: 80%;
+	background-color: rgba(255, 255, 255, 0.1);
+	
+}
+
 #home img{
 	display: block;
 	margin-left: auto;
@@ -98,5 +106,29 @@ header {
 	width: clamp(128px, 20%, 256px);
 	height: auto;
 	image-rendering: pixelated;
+}
 
+#home #content {
+	display: grid;
+	gap: 10px;
+	grid-template-areas: 
+	'left left left right right right';
+}
+
+#home #content > div{
+	text-align: center;
+	padding: 0.8rem;
+}
+
+#home #content #home-left{
+	grid-area: left;
+}
+
+#home #content #home-right{
+	grid-area: right;
+}
+
+@media only screen and (max-width: 600px) {
+	#home #content #home-left {grid-area: 1 / span 6;}
+	#home #content #home-right {grid-area: 2 / span 6;}
 }
