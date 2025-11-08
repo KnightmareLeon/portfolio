@@ -16,6 +16,7 @@ html {
 	font-family: 'Edit Undo', Fallback, sans-serif;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth; 
 }
 
 body{
@@ -128,21 +129,9 @@ header {
 
 #home #content #home-left{
 	grid-area: left;
-}
-
-#home progress{
-	height: 2rem;
-	margin-bottom: 0.5rem;
-	width: 50%;
-	border-width: 4px !important;
-}
-
-#hp::-webkit-progress-value {
-	background-color: #ff0000;
-}
-
-#sta::-webkit-progress-value {
-	background-color: yellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #home #content #home-right{
