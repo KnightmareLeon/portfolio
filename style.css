@@ -26,11 +26,6 @@ body{
 	background-image: radial-gradient(circle at 50% 50%, #222 0%, #000 100%);
 }
 
-pre {
-	font-family: 'Edit Undo', Fallback, sans-serif;
-	margin: 0em;
-}
-
 header {
 	position: sticky;
 	top: 0;
